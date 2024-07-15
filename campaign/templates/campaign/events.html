@@ -1,0 +1,31 @@
+{% extends 'campaign/base.html' %}
+{% block title %}Events{% endblock %}
+{% block content %}
+<div class="container mt-5">
+    <h1>Upcoming Events</h1>
+    <h5>Please join our upcoming events if you are already a member or click register to become a member</h5>
+    <ul class="list-group">
+        {% for event in events %}
+        <li class="list-group-item">
+            <h3>{{ event.name }}</h3>
+            <p><strong>Date:</strong> {{ event.date }}</p>
+            <p><strong>Location:</strong> {{ event.location }}</p>
+            <p>{{ event.description }}</p>
+            <form action="{% url 'join_event' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="event_name" value="{{ event.name }}">
+                <button type="submit" class="btn btn-primary">Join</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+

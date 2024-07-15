@@ -1,0 +1,66 @@
+{% extends 'campaign/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<section class="hero">
+    <div class="container text-center">
+        <h1 class="display-4 text-danger">Welcome to Lindo Ngodwane's Campaign Site</h1>
+        <p class="lead">Join Lindo in shaping a better future for our community.</p>
+    </div>
+</section>
+
+<section class="about-section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{% static 'css/images/lindo_ngodwane.jpg' %}" class="img-fluid rounded" alt="Lindo Ngodwane">
+            </div>
+            <div class="col-md-6">
+                <h2 class="text-danger">About Lindo Ngodwane</h2>
+                <p class="lead">Born in 1997, Lindo Ngodwane is a seasoned diplomat and strategist dedicated to international cooperation and community development.</p>
+                <p>Lindo holds a doctorate in international relations and has served as an ambassador to three provinces, fostering alliances and negotiating agreements that benefit our community.</p>
+                <p>As a senior advisor at the University of Cape Town, Lindo works tirelessly to address poverty, education, and crime, shaping a better tomorrow for all.</p>
+                <a class="btn btn-outline-danger" href="{% url 'about' %}" role="button">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="upcoming-events bg-light">
+    <div class="container">
+        <h2 class="text-center text-danger mb-4">Upcoming Events</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Town Hall Meeting</h3>
+                        <p class="card-text">Join us on 22 July for an interactive discussion on community issues.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Campaign Rally</h3>
+                        <p class="card-text">Attend our rally on 15 July to show your support for Lindo Ngodwane.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="social-media">
+    <div class="container text-center">
+        <h2 class="text-danger mb-4">Follow Us on Social Media</h2>
+        <div class="social-links">
+            <a href="#" class="btn btn-outline-primary btn-social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="btn btn-outline-info btn-social"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="btn btn-outline-danger btn-social"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
